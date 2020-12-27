@@ -127,8 +127,11 @@
        width: 100%;
    }
    
-   .wrapper a {
+   .project a,
+   .sidebar a {
        text-decoration: none;
+       height: 100%;
+       width: 100%;
        color: var(--color-text);
    }
    /* resume */
@@ -1346,6 +1349,7 @@
    .general_info {
        display: flex;
        flex-wrap: nowrap;
+       padding-top: 1vh;
        width: 100%;
        position: relative;
        justify-content: center;
@@ -1363,20 +1367,20 @@
    
    .general_info_title {
        text-align: left;
-       width: 50%;
+       width: 55%;
        box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
        padding: 1vh 2vh;
        background-color: var(--color-bg-light);
-       margin-right: 0.5%;
+       margin-right: 1%;
    }
    
    .general_info_text {
        text-align: right;
-       width: 100%;
+       width: 50%;
        box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
        padding: 1vh 2vh;
        background-color: var(--color-bg-light);
-       margin-left: 0.5%;
+       margin-left: 1%;
    }
    
    .general_info_title i {
