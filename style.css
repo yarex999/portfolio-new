@@ -1617,6 +1617,8 @@
     }
     
     @media(max-width:450px) {
+        .bg{
+        display: none}
         .sidebar {
             margin: 0;
       
