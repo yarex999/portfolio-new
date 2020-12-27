@@ -1595,7 +1595,6 @@
        }
        .sidebar,
        .content {
-           height: auto;
            overflow-y: scroll;
        }
        #about .tab_content:first-of-type .tab_content_inner {
