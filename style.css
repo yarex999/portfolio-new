@@ -1617,8 +1617,11 @@
     }
     
     @media(max-width:450px) {
-        .bg{
-        display: none}
+        .wrapper{
+        width: 100%;
+            height: 100%;
+        }
+  
         .sidebar {
             margin: 0;
       
