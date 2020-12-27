@@ -1621,10 +1621,10 @@
             margin: 0;
       
             padding: 0;
-            height: max-content;
+           
         }
         .content {
-            height: 100%;
+            margin-top: 3%;
         }
         #about .tab_content {
             padding: 0;
