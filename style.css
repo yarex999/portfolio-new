@@ -554,7 +554,6 @@
    
    .content a {
        text-decoration: none;
-       padding: 1vh 5vw;
        border-radius: 10px;
        width: 100%;
        display: flex;
