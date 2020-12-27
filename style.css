@@ -1349,7 +1349,6 @@
        width: 100%;
        position: relative;
        justify-content: center;
-       padding: 1vh 3vw;
        text-transform: uppercase;
        color: rgba(0, 0, 0, 0.5);
        font-family: 'Open Sans', sans-serif;
@@ -1368,7 +1367,7 @@
        box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
        padding: 1vh 2vh;
        background-color: var(--color-bg-light);
-       margin-right: 1%;
+       margin-right: 0.5%;
    }
    
    .general_info_text {
@@ -1377,7 +1376,7 @@
        box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
        padding: 1vh 2vh;
        background-color: var(--color-bg-light);
-       margin-left: 1%;
+       margin-left: 0.5%;
    }
    
    .general_info_title i {
