@@ -99,6 +99,7 @@
    .sidebar_inner {
        display: flex;
        flex-wrap: wrap;
+       align-items: flex-start;
        background-color: #adaab9;
        padding: 1.5vh;
        margin: 1.5vh;
