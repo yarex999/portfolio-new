@@ -1616,14 +1616,19 @@
     }
     
     @media(max-width:450px) {
-        .sidebar {
-            margin: 0;
-            margin-bottom: 5%;
-            padding: 0;
+        .wrapper{
+        width: 100%;
             height: 100%;
         }
+  
+        .sidebar {
+            margin: 0;
+      
+            padding: 0;
+           
+        }
         .content {
-            height: 100%;
+            margin-top: 3%;
         }
         #about .tab_content {
             padding: 0;
@@ -1644,6 +1649,9 @@
         }
         .img {
             width: 80%;
+        }
+        .img_inner {
+            width: 50%;
         }
         .name_inner {
             font-size: 25px;
