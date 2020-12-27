@@ -110,12 +110,11 @@
        box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
    }
    /* social media */
-   
-   .social-media {
+   /* .social-media {
        width: 100%;
        z-index: 2;
        margin-bottom: 1%;
-   }
+   } */
    
    .bottom-button-group1 {
        background: var(--color-bg);
@@ -125,6 +124,7 @@
        box-shadow: -1px -1px 1px var(--color-bg-light), inset -1px -1px 1px var(--color-bg-dark);
        display: flex;
        justify-content: space-between;
+       width: 100%;
    }
    
    .wrapper a {
@@ -139,7 +139,6 @@
        margin-top: 1.5%;
        justify-content: center;
        width: 100%;
-       height: 100%;
    }
    
    .retro-button {
@@ -1594,10 +1593,6 @@
    @media(max-width:650px) {
        .wrapper {
            display: block;
-           overflow-y: scroll;
-       }
-       .sidebar,
-       .content {
            overflow-y: scroll;
        }
        #about .tab_content:first-of-type .tab_content_inner {
