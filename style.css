@@ -1364,7 +1364,7 @@
    
    .general_info_title {
        text-align: left;
-       width: 40%;
+       width: 50%;
        box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
        padding: 1vh 2vh;
        background-color: var(--color-bg-light);
