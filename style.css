@@ -1648,6 +1648,9 @@
         .img {
             width: 80%;
         }
+        .img_inner {
+            width: 50%;
+        }
         .name_inner {
             font-size: 25px;
             margin-bottom: 0;
