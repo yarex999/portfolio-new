@@ -554,7 +554,6 @@
    
    .content a {
        text-decoration: none;
-       padding: 1vh 5vw;
        border-radius: 10px;
        width: 100%;
        display: flex;
@@ -1365,7 +1364,7 @@
    
    .general_info_title {
        text-align: left;
-       width: 40%;
+       width: 50%;
        box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
        padding: 1vh 2vh;
        background-color: var(--color-bg-light);
@@ -1578,12 +1577,24 @@
            border-radius: 0.5rem;
        }
        .general_info {
-           flex-wrap: wrap;
+           flex-wrap: nowrap;
+           font-size: 12px;
        }
-       .general_info_title,
+       .general_info_title {
+           width: 40%;
+           font-size: 8px;
+           box-shadow: none;
+       }
        .general_info_text {
-           width: 100%;
-           margin: 1% 0;
+           width: 60%;
+           font-size: 8px;
+           box-shadow: none;
+       }
+       .general_info_title {
+           margin-right: 0.5%;
+       }
+       .general_info_text {
+           margin-left: 0.5%;
        }
        .input-contact {
            width: 450px;
