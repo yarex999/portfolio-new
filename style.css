@@ -1589,6 +1589,15 @@
    }
    
    @media(max-width:650px) {
+       .wrapper {
+           display: block;
+           overflow-y: scroll;
+       }
+       .sidebar,
+       .content {
+           height: auto;
+           overflow-y: scroll;
+       }
        #about .tab_content:first-of-type .tab_content_inner {
            flex-wrap: wrap;
        }
