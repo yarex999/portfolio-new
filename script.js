@@ -1,4 +1,5 @@
 let chartElem = document.querySelectorAll('.chart_elem_sum');
+let chartBar = document.querySelectorAll('.language_level_percentage');
 let aboutMe = document.querySelectorAll('.header_aboutme');
 let generalInfo = document.querySelectorAll('.general_info');
 let languages = document.querySelectorAll('.languages');
@@ -10,19 +11,18 @@ let tabContents = document.querySelectorAll('.tab_content');
 for (let i = 0; i < aboutLinks.length; i++) {
     aboutLinks[i].addEventListener('click', function() {
         if (this.classList.contains('select')) {
-            hideAll();
+            hideAll(this.nextElementSibling);
         } else {
-            hideAll();
+            hideAll(this.nextElementSibling);
             this.classList.add('select');
             showText(this.nextElementSibling);
-            Array.from(chartElem).forEach(elem => elem.classList.add('chart_animation'));
-            Array.from(aboutMe).forEach(elem => elem.classList.add('aboutme_animate'));
+
 
         }
     });
 }
 
-function hideAll() {
+function hideAll(x) {
 
     for (let i = 0; i < aboutLinks.length; i++) {
         aboutLinks[i].classList.remove('select');
@@ -30,20 +30,44 @@ function hideAll() {
     for (let i = 0; i < tabContents.length; i++) {
         tabContents[i].style.height = '0';
     }
-
-
-    Array.from(chartElem).forEach(elem => elem.classList.remove('chart_animation'));
-    Array.from(aboutMe).forEach(elem => elem.classList.remove('aboutme_animate'));
-
-
-
+    tabDeleteAnimation(x);
 
 }
 
 function showText(textEl) {
     textEl.style.height = textEl.scrollHeight + 'px';
+    tabSetAnimation(textEl);
 
 }
+
+
+function tabSetAnimation(tab) {
+    let classNames = tab.classList;
+    let x = classNames[1];
+    switch (x) {
+        case 'tab1':
+            Array.from(chartElem).forEach(elem => elem.classList.add('chart_animation'));
+            break;
+        case 'tab4':
+            Array.from(chartBar).forEach(elem => elem.classList.add('animate_bar'));
+            break;
+    }
+}
+
+function tabDeleteAnimation(tab) {
+    let classNames = tab.classList;
+    let x = classNames[1];
+    switch (x) {
+        case 'tab1':
+            Array.from(chartElem).forEach(elem => elem.classList.remove('chart_animation'));
+            break;
+        case 'tab4':
+            Array.from(chartBar).forEach(elem => elem.classList.remove('animate_bar'));
+            break;
+    }
+}
+
+
 
 
 

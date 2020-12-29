@@ -1348,7 +1348,7 @@
    
    .general_info {
        display: flex;
-       flex-wrap: nowrap;
+       flex-wrap: wrap;
        padding-top: 1vh;
        width: 100%;
        position: relative;
@@ -1363,34 +1363,29 @@
        font-size: 15px;
        width: 100%;
        text-align: center;
-   }
-   
-   .general_info_title {
-       text-align: left;
-       width: 55%;
        box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
-       padding: 1vh 2vh;
        background-color: var(--color-bg-light);
-       margin-right: 1%;
    }
    
-   .general_info_text {
-       text-align: right;
-       width: 50%;
-       box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
-       padding: 1vh 2vh;
-       background-color: var(--color-bg-light);
-       margin-left: 1%;
-   }
-   
-   .general_info_title i {
-       margin-right: 10px;
-   }
-   
-   .general_info_title p {
+   .general_info_inner {
        display: flex;
-       align-items: center;
-       justify-content: flex-start;
+       justify-content: space-between;
+       width: 100%;
+       padding: 0vh 1vh;
+   }
+   
+   .general_info_inner i {
+       margin-right: 10%;
+   }
+   
+   .general_info_inner p {
+       width: 50%;
+       text-align: left;
+   }
+   
+   .general_info_inner p:nth-of-type(2n) {
+       width: 50%;
+       text-align: right;
    }
    /* languages */
    
@@ -1433,12 +1428,44 @@
        height: 10px;
        box-shadow: inset 4px 4px 4px #5f5e66, inset -1px -1px 15px #b4b1c2;
        background-color: #adaab9;
+       border-radius: 3px;
    }
    
-   .language_level_inner svg {
+   .language_level_percentage {
        position: absolute;
        top: 0;
+       height: 10px;
+       z-index: 3;
+       border-radius: 3px;
        left: 0;
+       box-shadow: -1px -1px 1px var(--color-bg), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
+   }
+   
+   .animate_bar {
+       animation: level 3s ease-in-out .5s;
+   }
+   
+   .russian {
+       width: 90%;
+       background-color: #2f8124;
+       --color-bg: #2f8124;
+       --color-bg-light: #48a33c;
+       --color-bg-dark: #025506;
+   }
+   
+   .english {
+       width: 65%;
+       background-color: #0066B4;
+       ;
+       --color-bg: #0066B4;
+       --color-bg-light: #3981CA;
+       --color-bg-dark: #004EAD;
+   }
+   
+   @keyframes level {
+       0% {
+           width: 0%;
+       }
    }
    
    path.rus_bar1 {
@@ -1580,24 +1607,8 @@
            border-radius: 0.5rem;
        }
        .general_info {
-           flex-wrap: nowrap;
+           flex-wrap: wrap;
            font-size: 12px;
-       }
-       .general_info_title {
-           width: 40%;
-           font-size: 8px;
-           box-shadow: none;
-       }
-       .general_info_text {
-           width: 60%;
-           font-size: 8px;
-           box-shadow: none;
-       }
-       .general_info_title {
-           margin-right: 0.5%;
-       }
-       .general_info_text {
-           margin-left: 0.5%;
        }
        .input-contact {
            width: 450px;
