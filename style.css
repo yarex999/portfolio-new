@@ -460,6 +460,7 @@
        margin: 0;
        animation: text-flicker-in-glow 4s linear both;
        animation-delay: 2.5s;
+     width: 100%;
    }
    
    .occupation_subtitle_inner {
@@ -471,6 +472,7 @@
        margin: 0;
        animation: text-flicker-in-glow 4s linear both;
        animation-delay: 3s;
+     width: 100%;
    }
    
    .status {
