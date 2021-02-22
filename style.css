@@ -282,7 +282,7 @@
        background: var(--color-bg);
        box-shadow: -1px -1px 1px var(--color-bg-light), inset -1px -1px 1px var(--color-bg-dark);
        border-bottom-left-radius: 1rem;
-     border-bottom-right-radius: 1rem;
+       border-bottom-right-radius: 1rem;
        margin-top: 1%;
        margin-left: 0;
        padding: 0.8vw 0.3vw;
@@ -461,7 +461,7 @@
        margin: 0;
        animation: text-flicker-in-glow 4s linear both;
        animation-delay: 2.5s;
-     width: 100%;
+       width: 100%;
    }
    
    .occupation_subtitle_inner {
@@ -473,7 +473,7 @@
        margin: 0;
        animation: text-flicker-in-glow 4s linear both;
        animation-delay: 3s;
-     width: 100%;
+       width: 100%;
    }
    
    .status {
@@ -514,7 +514,8 @@
        display: flex;
        flex-direction: column;
        justify-content: flex-start;
-       padding: 5% 1vh;
+       align-items: flex-start;
+       padding: 2vh 1vw 0 0;
    }
    /* about */
    
@@ -526,7 +527,6 @@
        flex-wrap: wrap;
        width: 100%;
        z-index: 1;
-       margin-top: 5%;
        border-radius: 1rem;
        /* overflow-y: scroll; */
        box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
@@ -578,7 +578,7 @@
    }
    
    .tab_content {
-       margin-bottom: 2%;
+       margin: 0;
    }
    
    .tab_content_inner {
@@ -639,10 +639,7 @@
    }
    
    .chart_animation {
-       animation-name: render;
-       animation-duration: 2s;
-       transition-property: all;
-       transition-duration: 2s;
+       animation: render 2s ease-in-out;
    }
    
    @keyframes render {
@@ -1237,7 +1234,6 @@
        text-shadow: 1px 1px rgba(255, 255, 255, 0.15);
        font-weight: 700;
        text-transform: uppercase;
-       
        font-size: 25px;
        width: 100%;
        text-align: center;
@@ -1362,7 +1358,6 @@
        text-shadow: 1px 1px rgba(255, 255, 255, 0.15);
        font-weight: 700;
        text-transform: uppercase;
-       
        font-size: 15px;
        width: 100%;
        text-align: center;
@@ -1445,7 +1440,7 @@
    }
    
    .animate_bar {
-       animation: level 3s ease-in-out .5s;
+       animation: level 3s ease-in-out;
    }
    
    .russian {
@@ -1514,11 +1509,12 @@
            stroke-dashoffset: 100;
        }
    }
-
-@media(min-width:1450px){
-  .occupation{
-  text-align: left}
-}
+   
+   @media(min-width:1450px) {
+       .occupation {
+           text-align: left
+       }
+   }
    
    @media (max-width:1100px) {
        .wrapper {

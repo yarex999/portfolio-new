@@ -3,69 +3,68 @@ let chartBar = document.querySelectorAll('.language_level_percentage');
 let aboutMe = document.querySelectorAll('.header_aboutme');
 let generalInfo = document.querySelectorAll('.general_info');
 let languages = document.querySelectorAll('.languages');
-let isScrolling = false;
+
 
 let aboutLinks = document.querySelectorAll('.about_link');
 let tabContents = document.querySelectorAll('.tab_content');
 
+
 for (let i = 0; i < aboutLinks.length; i++) {
     aboutLinks[i].addEventListener('click', function() {
-        if (this.classList.contains('select')) {
-            hideAll(this.nextElementSibling);
-        } else {
-            hideAll(this.nextElementSibling);
-            this.classList.add('select');
-            showText(this.nextElementSibling);
+        this.classList.toggle('select');
+        this.classList.contains('select') ? tabContents[i].style.height = tabContents[i].scrollHeight + 'px' : tabContents[i].style.height = 0;
+    })
+}
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        aboutLinks[0].classList.add("select");
+        tabContents[0].style.height = tabContents[0].scrollHeight + 'px';
+
+        for (let j = 0; j < chartElem.length; j++) {
+            if (isPartiallyVisible(chartElem[j])) {
+                chartElem[j].classList.add('chart_animation');
+            } else {
+                chartElem[j].classList.remove('chart_animation');
+            }
         }
-    });
-}
+    }, 2000)
 
-function hideAll(x) {
 
-    for (let i = 0; i < aboutLinks.length; i++) {
-        aboutLinks[i].classList.remove('select');
+
+})
+
+
+document.querySelector('.content').addEventListener('scroll', function() {
+    console.log('start');
+    for (let j = 0; j < chartElem.length; j++) {
+        if (isPartiallyVisible(chartElem[j])) {
+            chartElem[j].classList.add('chart_animation');
+        } else {
+            chartElem[j].classList.remove('chart_animation');
+        }
     }
-    for (let i = 0; i < tabContents.length; i++) {
-        tabContents[i].style.height = '0';
+
+    for (let k = 0; k < chartBar.length; k++) {
+        if (isPartiallyVisible(chartBar[k])) {
+            chartBar[k].classList.add('animate_bar');
+        } else {
+            chartBar[k].classList.remove('animate_bar');
+        }
     }
-    tabDeleteAnimation(x);
+    console.log('end');
+})
 
+function isPartiallyVisible(elem) {
+    let elementBoundary = elem.getBoundingClientRect();
+    let top = elementBoundary.top;
+    let bottom = elementBoundary.bottom;
+    let height = elementBoundary.height;
+
+    return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
 
-function showText(textEl) {
-    textEl.style.height = textEl.scrollHeight + 'px';
-    tabSetAnimation(textEl);
-
-}
-
-
-function tabSetAnimation(tab) {
-    let classNames = tab.classList;
-    let x = classNames[1];
-    switch (x) {
-        case 'tab1':
-            Array.from(chartElem).forEach(elem => elem.classList.add('chart_animation'));
-            break;
-        case 'tab4':
-            Array.from(chartBar).forEach(elem => elem.classList.add('animate_bar'));
-            break;
-    }
-}
-
-function tabDeleteAnimation(tab) {
-    let classNames = tab.classList;
-    let x = classNames[1];
-    switch (x) {
-        case 'tab1':
-            Array.from(chartElem).forEach(elem => elem.classList.remove('chart_animation'));
-            break;
-        case 'tab4':
-            Array.from(chartBar).forEach(elem => elem.classList.remove('animate_bar'));
-            break;
-    }
-}
 
 
 
