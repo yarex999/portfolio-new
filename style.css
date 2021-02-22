@@ -1935,9 +1935,7 @@
    }
    
    @media(max-width:450px) {
-     .wrapper{
-     display:block;
-     } 
+
      .sidebar {
            margin: 0;
            margin-bottom: 5vh;
@@ -1972,7 +1970,7 @@
            width: 10%;
        }
        .img {
-           width: 30%;
+           width: 60%;
        }
        .name_inner {
            font-size: 25px;
