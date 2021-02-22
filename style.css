@@ -1935,7 +1935,10 @@
    }
    
    @media(max-width:450px) {
-
+     .wrapper{
+     height: auto;
+       overflow-y: scroll;
+     }
      .sidebar {
            margin: 0;
            margin-bottom: 5vh;
@@ -1947,6 +1950,7 @@
            margin-top: 5vh;
          display:block;
            padding: 0;
+         overflow: hidden;
        }
        #about .tab_content {
            padding: 0;
