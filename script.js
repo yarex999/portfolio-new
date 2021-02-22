@@ -10,7 +10,8 @@ let tabContents = document.querySelectorAll('.tab_content');
 
 
 for (let i = 0; i < aboutLinks.length; i++) {
-    aboutLinks[i].addEventListener('click', function() {
+    aboutLinks[i].addEventListener('click', function(e) {
+        e.preventDefault();
         this.classList.toggle('select');
         this.classList.contains('select') ? tabContents[i].style.height = tabContents[i].scrollHeight + 'px' : tabContents[i].style.height = 0;
     })
