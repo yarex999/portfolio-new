@@ -1972,7 +1972,7 @@
            width: 10%;
        }
        .img {
-           width: 80%;
+           width: 30%;
        }
        .name_inner {
            font-size: 25px;
@@ -2057,7 +2057,7 @@
            -webkit-box-pack: center;
            -ms-flex-pack: center;
            justify-content: center;
-           height: 50%;
+           height: 30%;
        }
        .status {
            -webkit-box-align: stretch;
