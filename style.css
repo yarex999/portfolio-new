@@ -1910,10 +1910,7 @@
    }
    
    @media(max-width:650px) {
-       .wrapper {
-           display: block;
-           overflow-y: scroll;
-       }
+      
        #about .tab_content:first-of-type .tab_content_inner {
            -ms-flex-wrap: wrap;
            flex-wrap: wrap;
