@@ -1941,10 +1941,10 @@
    }
    
    @media(max-width:450px) {
-       /* .wrapper {
+       .wrapper {
            height: max-content;
            overflow-y: scroll;
-       } */
+       }
        .sidebar {
            margin: 0;
            margin-bottom: 5vh;
@@ -1957,7 +1957,6 @@
            display: block;
            padding: 0;
            height: max-content;
-           overflow-y: scroll;
        }
        #about .tab_content {
            padding: 0;

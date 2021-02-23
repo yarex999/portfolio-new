@@ -36,6 +36,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+window.onscroll = function() {
+    console.log('start');
+    for (let j = 0; j < chartElem.length; j++) {
+        if (isPartiallyVisible(chartElem[j])) {
+            chartElem[j].classList.add('chart_animation');
+        } else {
+            chartElem[j].classList.remove('chart_animation');
+        }
+    }
+
+    for (let k = 0; k < chartBar.length; k++) {
+        if (isPartiallyVisible(chartBar[k])) {
+            chartBar[k].classList.add('animate_bar');
+        } else {
+            chartBar[k].classList.remove('animate_bar');
+        }
+    }
+    console.log('end');
+}
 
 document.querySelector('.content').addEventListener('scroll', function() {
     console.log('start');
