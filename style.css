@@ -1950,7 +1950,6 @@
            margin-top: 5vh;
          display:block;
            padding: 0;
-         overflow: hidden;
          height: max-content;
        }
        #about .tab_content {
