@@ -223,6 +223,15 @@
    
    .project a,
    .sidebar a {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
        text-decoration: none;
        height: 100%;
        width: 100%;
@@ -926,6 +935,7 @@
    
    .chart_percent {
        position: absolute;
+       top: auto;
        font-size: 20px;
        color: rgba(255, 255, 255, 0.932);
        font-weight: 700;
@@ -1910,7 +1920,6 @@
    }
    
    @media(max-width:650px) {
-      
        #about .tab_content:first-of-type .tab_content_inner {
            -ms-flex-wrap: wrap;
            flex-wrap: wrap;
@@ -1918,9 +1927,6 @@
        .tab_content_img,
        .tab_content_chart {
            width: 40%;
-           -webkit-box-flex: 0;
-           -ms-flex: 0 1 auto;
-           flex: 0 1 auto;
        }
        .tab_content_description {
            width: 100%;
@@ -1935,22 +1941,23 @@
    }
    
    @media(max-width:450px) {
-     .wrapper{
-     height: max-content;
-       overflow-y: scroll;
-     }
-     .sidebar {
+       /* .wrapper {
+           height: max-content;
+           overflow-y: scroll;
+       } */
+       .sidebar {
            margin: 0;
            margin-bottom: 5vh;
-         display:block;
+           display: block;
            padding: 0;
        }
        .content {
            margin: 0;
            margin-top: 5vh;
-         display:block;
+           display: block;
            padding: 0;
-         height: max-content;
+           height: max-content;
+           overflow-y: scroll;
        }
        #about .tab_content {
            padding: 0;
@@ -1960,15 +1967,6 @@
        }
        .offer {
            font-size: 15px;
-       }
-       .bottom-button-group2 {
-           -webkit-box-pack: justify;
-           -ms-flex-pack: justify;
-           justify-content: space-between;
-           -webkit-box-align: stretch;
-           -ms-flex-align: stretch;
-           align-items: stretch;
-           font-size: 25px;
        }
        .bottom-button-group1 button {
            width: 10%;
@@ -2022,15 +2020,11 @@
    }
    
    @media(max-width:370px) {
-       .bottom-button-group1 button,
-       .bottom-button-group2 button {
+       .bottom-button-group1 button {
            min-width: 2rem;
        }
        .bottom-button-group1 button {
            min-width: 25%;
-       }
-       .bottom-button-group2 button {
-           min-height: 15%;
        }
        .bottom-button-group1 {
            -ms-flex-wrap: wrap;
@@ -2041,12 +2035,6 @@
            -webkit-box-pack: center;
            -ms-flex-pack: center;
            justify-content: center;
-           padding: 1vh 0;
-       }
-       .bottom-button-group2 {
-           -webkit-box-align: center;
-           -ms-flex-align: center;
-           align-items: center;
            padding: 1vh 0;
        }
        .img {
