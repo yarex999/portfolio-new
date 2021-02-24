@@ -902,7 +902,7 @@
        box-shadow: inset 2px 2px 3px 1px var(--color-bg-dark), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark);
        border-radius: 5px;
        margin: 0 1vw;
-       ;
+       
    }
    
    .chart_elem_sum {
@@ -911,9 +911,8 @@
        cursor: pointer;
    }
    
-   .chart_elem_sum:nth-child(n+1) {
-       -webkit-animation-delay: 0.3s;
-       animation-delay: 0.3s;
+ .chart_inner_summary {
+       transform: rotate(270deg);
    }
    
    .chart_animation {
